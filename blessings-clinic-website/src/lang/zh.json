@@ -53,18 +53,39 @@
   },
   "treatments": {
     "title": "治療方式",
-    "description": "我們提供各種中醫治療服務，包括濃縮中藥沖劑、針灸、綜合結構治療及各種特色療法。"
+    "description": "我們提供各種中醫治療服務，包括濃縮中藥沖劑、針灸、綜合結構治療及各種特色療法。",
+    "decoction": {
+      "name": "沖劑",
+      "description": "濃縮中藥沖劑的詳細介紹...",
+      "symptoms": "感冒、發燒、咳嗽、胃痛等"
+    },
+    "acupuncture": {
+      "name": "針刺",
+      "description": "針灸治療的詳細介紹...",
+      "symptoms": "痛症、頭痛、失眠、焦慮等"
+    },
+    "moxibustion": {
+      "name": "艾灸",
+      "description": "艾灸治療的詳細介紹...",
+      "symptoms": "胃寒、腰痛、關節痛等"
+    },
+    "structural": {
+      "name": "綜合結構治療",
+      "description": "綜合結構治療的詳細介紹...",
+      "symptoms": "脊椎問題、肌肉疼痛、姿勢不正等"
+    },
+    "therapy": {
+      "name": "中醫理療",
+      "description": "中醫理療的詳細介紹...",
+      "symptoms": "各種慢性疼痛、肌肉緊張等"
+    }
   },
   "contact": {
     "title": "聯絡我們",
     "address": "診所地址 : 香港灣仔軒尼詩道300號中邦商業大廈23樓",
-    "phone": "預約電話 : 57158858",
+    "phone": "預約電話 / Whatsapp : 57158858",
     "time": "診所時間 : 星期一至日 11:00 - 20:00 / 逢星期三休息 / 公眾假期以ig公告為準",
-    "photos": "照",
-    "transport": {
-      "mtr": "地鐵: 灣仔站A3出口朝銅鑼灣方向步行約6分鐘，便可抵達。",
-      "bus": "巴士: 於士釗域道下車 到達中邦商業大廈(入口便在集成中心旁邊)"
-    }
+    "photos": "照"
   },
   "navigation": {
     "home": "首頁",

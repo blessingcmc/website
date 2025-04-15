@@ -17,7 +17,7 @@
         </ul>
     </nav>
 
-    <section id="home" class="parallax" style="background-image: url('assets/images/hero.jpg')">
+    <section id="home" class="parallax">
         <div class="content-wrapper">
             <h1 class="section-heading"></h1>
             <p class="section-text"></p>
@@ -61,10 +61,32 @@
         </div>
     </section>
 
-    <section id="treatments" class="parallax" style="background-image: url('assets/images/treatments.jpg')">
+    <section id="treatments" class="parallax">
         <div class="content-wrapper">
             <h2 class="section-heading"></h2>
-            <p class="section-text"></p>
+            <div class="treatments-nav">
+                <button class="nav-btn active" data-treatment="decoction">沖劑</button>
+                <button class="nav-btn" data-treatment="acupuncture">針刺</button>
+                <button class="nav-btn" data-treatment="moxibustion">艾灸</button>
+                <button class="nav-btn" data-treatment="structural">綜合結構治療</button>
+                <button class="nav-btn" data-treatment="therapy">中醫理療</button>
+            </div>
+            <div class="treatment-content">
+                <div class="treatment active" data-treatment="decoction">
+                    <div class="treatment-info">
+                        <img src="assets/images/treatments/decoction.jpg" alt="Chinese Medicine Decoction">
+                        <div class="info-text">
+                            <h3 class="treatment-name">沖劑</h3>
+                            <p class="treatment-description"></p>
+                            <div class="treatment-details">
+                                <h4>適應症狀</h4>
+                                <p class="symptoms-text"></p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <!-- Other treatment divs will be generated dynamically -->
+            </div>
         </div>
     </section>
 
@@ -78,19 +100,7 @@
                     <p class="phone"></p>
                 </div>
             </div>
-            <div class="travel-info">
-                <h3>前往診所</h3>
-                <div class="transport-options">
-                    <div class="transport-option">
-                        <p class="mtr-directions"></p>
-                    </div>
-                    <div class="transport-option">
-                        <p class="bus-directions"></p>
-                    </div>
-                </div>
-            </div>
         </div>
-        
     </section>
 
     <script src="assets/js/main.js"></script>

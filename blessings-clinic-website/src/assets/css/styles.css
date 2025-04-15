@@ -195,6 +195,14 @@ footer {
     background: var(--overlay);
 }
 
+#home.parallax {
+    background-image: url('../images/hero.jpg');
+}
+
+#treatments.parallax {
+    background-image: url('../images/treatments.jpg');
+}
+
 section {
     height: 100vh;
     scroll-snap-align: start;
@@ -203,7 +211,7 @@ section {
     flex-direction: column;
     justify-content: center;
     align-items: center;
-    padding: 80px 20px;
+    padding: 40px 20px; /* Reduced from 80px 20px */
     overflow: hidden;
     text-align: center;
     background-color: var(--primary-dark);
@@ -215,20 +223,20 @@ section:nth-child(odd) {
 
 .content-wrapper {
     max-width: 1200px;
-    width: calc(100% - 180px); /* Reduced from 250px */
-    margin-left: 140px; /* Changed from auto */
+    width: calc(100% - 180px);
+    margin-left: 140px;
     margin-right: 20px;
-    padding: 2rem;
+    padding: 1rem; /* Reduced from 2rem */
 }
 
 .section-heading {
+    margin-top: 1rem; /* Added to reduce space from top */
     font-size: 3.5rem;
     margin-bottom: 1rem;
     opacity: 0;
     transform: translateY(20px);
     transition: var(--transition);
     color: var(--text-light);
-    margin-bottom: 2rem;
     text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.3);
 }
 
@@ -258,6 +266,13 @@ section:nth-child(odd) {
 #practitioners {
     position: relative;
     overflow: visible; /* Allow nav to extend outside */
+}
+
+/* Align the section heading to the left and adjust the font color */
+#practitioners .section-heading {
+    text-align: left;
+    color: #333; /* Use a sharper color like dark gray */
+    font-weight: bold; /* Optional: Make the font bold for better visibility */
 }
 
 .practitioner {
@@ -452,6 +467,7 @@ section:nth-child(odd) {
 .contact-info {
     max-width: 800px;
     margin-left: 0;
+    padding-top: 0; /* Remove the padding that was added for map alignment */
 }
 
 #contact .section-heading {
@@ -469,13 +485,19 @@ section:nth-child(odd) {
 
 .contact-container {
     display: flex;
-    justify-content: space-between;
     gap: 2rem;
     margin-bottom: 2rem;
+    margin-top: 2rem;
 }
 
 .contact-info, .travel-info {
     flex: 1;
+}
+
+@media (max-width: 768px) {
+    .contact-container {
+        flex-direction: column;
+    }
 }
 
 .travel-info h3 {
@@ -501,16 +523,125 @@ section:nth-child(odd) {
     line-height: 1.6;
 }
 
-.map-container {
+/* Treatment section specific styles */
+.treatments-nav {
+    position: absolute;
+    left: 0;
+    top: 50%;
+    transform: translateY(-50%);
+    display: flex;
+    flex-direction: column;
+    gap: 0.5rem;
+    padding: 1rem;
+    background: rgba(14, 143, 113, 0.1);
+    backdrop-filter: blur(10px);
+    border-radius: 0 15px 15px 0;
+    z-index: 100;
+    width: 120px;
+}
+
+.treatment {
+    position: absolute;
     width: 100%;
-    margin-top: 2rem;
+    opacity: 0;
+    visibility: hidden;
+    transition: all 0.5s ease;
+    transform: translateX(20px);
+    background: rgba(255, 255, 255, 0.9);
     border-radius: 10px;
-    overflow: hidden;
+    padding: 20px;
+    margin: 20px;
     box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
 }
 
-.clinic-map {
+.treatment.active {
+    opacity: 1;
+    visibility: visible;
+    transform: translateX(0);
+}
+
+.treatment-info {
+    display: flex;
+    gap: 2rem;
+    align-items: flex-start;
+    padding: 2rem;
+    border-radius: 10px;
+    margin-left: 0;
+}
+
+.treatment-info img {
+    width: 300px;
+    height: 400px;
+    object-fit: cover;
+    border-radius: 10px;
+}
+
+.treatment-name {
+    font-size: 2rem;
+    margin-bottom: 1rem;
+    color: var(--primary-dark);
+}
+
+.treatment-description {
+    font-size: 1.1rem;
+    line-height: 1.6;
+    margin-bottom: 1.5rem;
+    color: var(--text-dark);
+}
+
+.treatment-details h4 {
+    color: var(--primary);
+    font-size: 1.2rem;
+    margin-bottom: 0.5rem;
+}
+
+.symptoms-text {
+    font-size: 1rem;
+    line-height: 1.5;
+    color: var(--text-dark);
+}
+
+#treatments .content-wrapper {
+    margin-left: 140px;
+    width: calc(100% - 160px);
+    text-align: left;
+}
+
+/* Treatment section title styling */
+#treatments .section-heading {
+    text-align: left;
+    color: #333;
+    font-weight: bold;
+    margin-left: 140px; /* Match the content wrapper margin */
+    margin-bottom: 2rem;
+    text-shadow: none; /* Remove shadow for consistency with doctors section */
+}
+
+@media (max-width: 768px) {
+    .treatments-nav {
+        position: relative;
+        flex-direction: row;
+        width: 100%;
+        overflow-x: auto;
+        top: 0;
+        transform: none;
+        border-radius: 15px;
+        margin-bottom: 1rem;
+    }
+
+    #treatments .content-wrapper {
+        margin-left: 1rem;
+        width: calc(100% - 2rem);
+    }
+
+    #treatments .section-heading {
+        margin-left: 1rem;
+        font-size: 2.5rem;
+    }
+}
+
+.treatment-content {
+    position: relative;
+    min-height: 500px;
     width: 100%;
-    height: auto;
-    display: block;
 }

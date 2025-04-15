@@ -91,44 +91,68 @@ async function loadLanguage(lang) {
             });
         });
 
-        // Update contact section
-        document.querySelector('.mtr-directions').textContent = data.contact.transport.mtr;
-        document.querySelector('.bus-directions').textContent = data.contact.transport.bus;
+        // Update treatments section
+        const treatments = data.treatments;
+        const treatmentContent = document.querySelector('.treatment-content');
+        treatmentContent.innerHTML = ''; // Clear existing content
+        
+        const treatmentIds = ['decoction', 'acupuncture', 'moxibustion', 'structural', 'therapy'];
+        
+        treatmentIds.forEach(treatmentId => {
+            const treatment = treatments[treatmentId];
+            const treatmentElement = `
+                <div class="treatment ${treatmentId === 'decoction' ? 'active' : ''}" data-treatment="${treatmentId}">
+                    <div class="treatment-info">
+                        <img src="assets/images/treatments/${treatmentId}.jpg" alt="${treatment.name}">
+                        <div class="info-text">
+                            <h3 class="treatment-name">${treatment.name}</h3>
+                            <p class="treatment-description">${treatment.description}</p>
+                            <div class="treatment-details">
+                                <h4>適應症狀</h4>
+                                <p class="symptoms-text">${treatment.symptoms}</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            `;
+            treatmentContent.insertAdjacentHTML('beforeend', treatmentElement);
+        });
 
+        // Update treatment navigation buttons with names
+        const treatmentButtons = document.querySelectorAll('.treatments-nav .nav-btn');
+        treatmentButtons.forEach(btn => {
+            const treatmentId = btn.dataset.treatment;
+            if (treatments[treatmentId]) {
+                btn.textContent = treatments[treatmentId].name;
+            }
+        });
+
+        // Return a promise that resolves when content is loaded
+        return Promise.resolve();
     } catch (error) {
         console.error('Error loading language file:', error);
+        return Promise.reject(error);
     }
 }
 
 document.addEventListener('DOMContentLoaded', () => {
-    loadLanguage(currentLang);
+    // Load language first
+    loadLanguage(currentLang).then(() => {
+        // Initialize treatments after content is loaded
+        initTreatments();
+    });
     
     // Language switcher
-    document.getElementById('lang-switch').addEventListener('click', () => {
-        currentLang = currentLang === 'en' ? 'zh' : 'en';
-        loadLanguage(currentLang);
-    });
-
-    // Highlight active section in navbar
-    window.addEventListener('scroll', () => {
-        const sections = document.querySelectorAll('section');
-        const navLinks = document.querySelectorAll('.navbar ul li a');
-
-        let currentSection = '';
-        sections.forEach(section => {
-            const sectionTop = section.offsetTop;
-            if (pageYOffset >= sectionTop - 50) {
-                currentSection = section.getAttribute('id');
-            }
+    const langSwitch = document.getElementById('lang-switch');
+    if (langSwitch) {
+        langSwitch.addEventListener('click', () => {
+            currentLang = currentLang === 'en' ? 'zh' : 'en';
+            loadLanguage(currentLang).then(() => {
+                // Re-initialize treatments after language switch
+                initTreatments();
+            });
         });
-
-        navLinks.forEach(link => {
-            link.classList.remove('active');
-            if (link.getAttribute('href') === `#${currentSection}`) {
-                link.classList.add('active');
-            }
-        });
-    });
+    }
 });
 
 // Add scroll-based animations
@@ -169,3 +193,26 @@ document.querySelectorAll('a[href^="#"]').forEach(anchor => {
         });
     });
 });
+
+function initTreatments() {
+    const treatmentBtns = document.querySelectorAll('.treatments-nav .nav-btn');
+    const treatments = document.querySelectorAll('.treatment');
+
+    treatmentBtns.forEach(btn => {
+        btn.addEventListener('click', (e) => {
+            e.preventDefault();
+            const targetTreatment = btn.getAttribute('data-treatment');
+
+            // Remove active class from all buttons and treatments
+            treatmentBtns.forEach(b => b.classList.remove('active'));
+            treatments.forEach(t => t.classList.remove('active'));
+
+            // Add active class to clicked button and corresponding treatment
+            btn.classList.add('active');
+            const activeContent = document.querySelector(`.treatment[data-treatment="${targetTreatment}"]`);
+            if (activeContent) {
+                activeContent.classList.add('active');
+            }
+        });
+    });
+}
