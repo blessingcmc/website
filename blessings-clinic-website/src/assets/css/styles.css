@@ -62,16 +62,19 @@ header {
     gap: 2rem;
     list-style: none;
     justify-content: center;
+    align-items: center; /* Add this to vertically align all items */
     margin: 0;
     padding: 0;
 }
 
 .navbar ul li {
-    margin: 0 15px;
+    margin: 0; /* Remove the margin */
+    display: flex; /* Add this */
+    align-items: center; /* Add this */
 }
 
 .navbar ul li a, #lang-switch {
-    color: white;
+    color: var(--text-light);
     text-decoration: none;
     font-size: 16px;
     cursor: pointer;
@@ -90,6 +93,7 @@ header {
     opacity: 1;
 }
 
+/* Update the language switch button styles */
 #lang-switch {
     background: transparent;
     border: 1px solid var(--accent);
@@ -98,6 +102,9 @@ header {
     cursor: pointer;
     transition: var(--transition);
     color: var(--text-light);
+    font-size: 16px; /* Match the font size with other nav items */
+    height: fit-content; /* Add this */
+    margin: 0; /* Reset any margins */
 }
 
 #lang-switch:hover {
@@ -192,15 +199,23 @@ footer {
     left: 0;
     right: 0;
     bottom: 0;
-    background: var(--overlay);
+    background: linear-gradient(90deg, var(--overlay) 60%);
 }
 
 #home.parallax {
+    background-image: url('../images/heroo.jpg');
+}
+
+#practitioners.parallax {
     background-image: url('../images/hero.jpg');
 }
 
 #treatments.parallax {
     background-image: url('../images/treatments.jpg');
+}
+
+#contact.parallax {
+    background-image: url('../images/contact.jpg');
 }
 
 section {
@@ -271,7 +286,7 @@ section:nth-child(odd) {
 /* Align the section heading to the left and adjust the font color */
 #practitioners .section-heading {
     text-align: left;
-    color: #333; /* Use a sharper color like dark gray */
+    color: #1fd4d4b9; /* Use a sharper color like dark gray */
     font-weight: bold; /* Optional: Make the font bold for better visibility */
 }
 
@@ -308,9 +323,40 @@ section:nth-child(odd) {
     background-color: var(--primary-dark);
 }
 
-.address, .phone {
+#contact .content-wrapper {
+    text-align: left;
+    position: relative;
+}
+
+.contact-info {
+    max-width: 800px;
+    margin-left: 0;
+    padding-top: 0;
+    display: flex;
+    flex-direction: row;
+    align-items: flex-start;
+    position: relative; /* Add this */
+    z-index: 2; /* Add this to ensure text stays above */
+}
+
+.contact-map {
+    margin-top: 2rem;
+    width: 30%;
+    max-width: 800px;
+    position: relative; /* Add this */
+    z-index: 1; /* Add this to place map below text */
+}
+
+#contact .section-text,
+#contact .address,
+#contact .phone {
+    margin-left: 0;
+    text-align: left;
+    border-radius: 5px;
+    backdrop-filter: blur(5px);
     color: var(--accent);
     margin: 10px 0;
+
 }
 
 /* Active navigation link */
@@ -445,19 +491,20 @@ section:nth-child(odd) {
     color: var(--primary-dark);
 }
 
-.instagram-link {
-    display: inline-block;
+/* Add new doctor social styles */
+.doctor-social {
     margin-top: 1rem;
 }
 
-.instagram-link img {
-    width: 24px;
-    height: 24px;
-    transition: transform 0.3s ease;
+.doctor-social .social-icon {
+    color: var(--primary-dark);
+    opacity: 0.9;
 }
 
-.instagram-link:hover img {
-    transform: scale(1.2);
+.doctor-social .social-icon:hover {
+    color: var(--primary);
+    opacity: 1;
+    transform: scale(1.1);
 }
 
 #contact .content-wrapper {
@@ -468,6 +515,22 @@ section:nth-child(odd) {
     max-width: 800px;
     margin-left: 0;
     padding-top: 0; /* Remove the padding that was added for map alignment */
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+}
+
+.contact-map {
+    margin-top: 2rem;
+    width: 30%;
+    max-width: 800px; /* Same as contact-info max-width */
+}
+
+.contact-map img {
+    width: 100%;
+    height: auto;
+    border-radius: 10px;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
 }
 
 #contact .section-heading {
@@ -485,9 +548,10 @@ section:nth-child(odd) {
 
 .contact-container {
     display: flex;
+    flex-direction: row; /* Change to row to place items side by side */
     gap: 2rem;
-    margin-bottom: 2rem;
     margin-top: 2rem;
+    align-items: flex-start;
 }
 
 .contact-info, .travel-info {
@@ -610,7 +674,7 @@ section:nth-child(odd) {
 /* Treatment section title styling */
 #treatments .section-heading {
     text-align: left;
-    color: #333;
+    color: var(--primary);
     font-weight: bold;
     margin-left: 140px; /* Match the content wrapper margin */
     margin-bottom: 2rem;
@@ -644,4 +708,80 @@ section:nth-child(odd) {
     position: relative;
     min-height: 500px;
     width: 100%;
+}
+
+/* Social links styles */
+.social-links {
+    display: flex;
+    align-items: center;
+    gap: 1rem;
+}
+
+.social-icon {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 24px;
+    height: 24px;
+    transition: var(--transition);
+    color: var(--text-light);
+    opacity: 0.9;
+}
+
+.social-icon:hover {
+    opacity: 1;
+    transform: scale(1.1);
+    color: var(--accent);
+}
+
+.social-icon i {
+    font-size: 20px;
+}
+
+@media (max-width: 768px) {
+    .social-icon i {
+        font-size: 16px;
+    }
+}
+
+.social-icon img {
+    width: 100%;
+    height: 100%;
+    object-fit: contain;
+    opacity: 0.9;
+}
+
+.social-icon:hover img {
+    opacity: 1;
+    transform: scale(1.1);
+}
+
+@media (max-width: 768px) {
+    .social-links {
+        gap: 0.5rem;
+    }
+    
+    .social-icon {
+        width: 20px;
+        height: 20px;
+    }
+}
+
+.map-link {
+    display: inline-flex;
+    align-items: center;
+    gap: 0.5rem;
+    color: var(--accent);
+    text-decoration: none;
+    margin: 0.5rem 0;
+    transition: var(--transition);
+}
+
+.map-link:hover {
+    color: var(--primary);
+    transform: translateX(5px);
+}
+
+.map-link i {
+    font-size: 1.2rem;
 }

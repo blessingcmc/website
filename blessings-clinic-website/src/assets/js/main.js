@@ -61,9 +61,11 @@ async function loadLanguage(lang) {
                                     <p class="schedule-text">${doctor.opening_hours}</p>
                                 </div>
                             ` : ''}
-                            <a href="https://instagram.com/${doctor.instagramLink}" class="instagram-link" target="_blank">
-                                <img src="assets/images/instagram-icon.png" alt="Instagram">
-                            </a>
+                            <div class="doctor-social">
+                                <a href="https://instagram.com/${doctor.instagramLink}" class="instagram-link" target="_blank">
+                                    <i class="fab fa-instagram"></i>
+                                </a>
+                            </div>
                         </div>
                     </div>
                 </div>

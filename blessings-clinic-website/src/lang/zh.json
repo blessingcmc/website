@@ -1,8 +1,7 @@
 {
   "clinicName": "福氣堂中醫診所",
   "home": {
-    "welcome": "歡迎來到福氣堂中醫診所",
-    "latestInstagramPost": "查看我们的最新Instagram帖子",
+    "welcome": "歡迎蒞臨福氣堂中醫診所",
     "contact": "香港灣仔軒尼詩道300號中邦商業大廈23樓 / 預約電話: 57158858"
   },
   "practitioners": {
@@ -20,7 +19,7 @@
       "bio": "香港中文大學 中醫學 學士",
       "items": "手法結構治療 | 美容針 | 內科 | 痛症 | 針灸",
       "opening_hours": "逢星期一、二、五、六",
-      "instagramLink": "醫師個人Instagram"
+      "instagramLink": "nekotcm"
     },
     "lf": {
       "name": "黎俊輝中醫師",
