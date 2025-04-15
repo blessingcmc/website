@@ -1,0 +1,79 @@
+{
+  "clinicName": "福氣堂中醫診所",
+  "home": {
+    "welcome": "歡迎來到福氣堂中醫診所",
+    "latestInstagramPost": "查看我们的最新Instagram帖子",
+    "contact": "香港灣仔軒尼詩道300號中邦商業大廈23樓 / 預約電話: 57158858"
+  },
+  "practitioners": {
+    "title": "醫師介紹",
+    "doctors": ["agnes", "mandy", "sky", "lf", "cheese", "kungfu"],
+    "agnes": {
+      "name": "李翠珊中醫師",
+      "bio": "香港大學 中醫學（針灸）碩士<br>香港大學 中醫學 學士<br>中醫學深造證書(臨床婦科學)",
+      "items": "婦科 | 美容針 | 面癱 | 兒科 ",
+      "opening_hours": "逢星期一、二、四、六",
+      "instagramLink": "blessings.nolimit"
+    },
+    "mandy": {
+      "name": "劉敏怡中醫師",
+      "bio": "香港中文大學 中醫學 學士",
+      "items": "手法結構治療 | 美容針 | 內科 | 痛症 | 針灸",
+      "opening_hours": "逢星期一、二、五、六",
+      "instagramLink": "醫師個人Instagram"
+    },
+    "lf": {
+      "name": "黎俊輝中醫師",
+      "bio": "香港中文大學 中醫學 碩士",
+      "items": "痛症 | 脾胃 | 男科 | 艾灸",
+      "opening_hours": "逢星期二、五、日",
+      "instagramLink": "world.of.lf"
+    },
+    "sky": {
+      "name": "冼建移中醫師",
+      "bio": "香港中文大學 中醫學 學士",
+      "items": "手法結構治療 | 針灸 | 兒科 | 脾胃 ",
+      "opening_hours": "逢星期一、五",
+      "instagramLink": "醫師個人Instagram"
+    },
+    "cheese": {
+      "name": "周芷羨中醫師",
+      "bio": "香港中文大學 針灸學理學 碩士<br>香港中文大學 中醫學 學士",
+      "items": "婦科 | 手法結構治療 | 備孕 | 痛症 | 皮膚 | 針灸",
+      "opening_hours": "逢星期四、日",
+      "instagramLink": "醫師個人Instagram"
+    },
+    "kungfu": {
+      "name": "余承暉中醫師",
+      "bio": "廣州中醫藥大學 中醫學 學士",
+      "items": "手法結構治療 | 痛症 | 脾胃 | 肺病 | 經痛 | 針灸 ",
+      "opening_hours": "逢星期一、二、四、六",
+      "instagramLink": "醫師個人Instagram"
+    }
+  },
+  "treatments": {
+    "title": "治療方式",
+    "description": "我們提供各種中醫治療服務，包括濃縮中藥沖劑、針灸、綜合結構治療及各種特色療法。"
+  },
+  "contact": {
+    "title": "聯絡我們",
+    "address": "診所地址 : 香港灣仔軒尼詩道300號中邦商業大廈23樓",
+    "phone": "預約電話 : 57158858",
+    "time": "診所時間 : 星期一至日 11:00 - 20:00 / 逢星期三休息 / 公眾假期以ig公告為準",
+    "photos": "照",
+    "transport": {
+      "mtr": "地鐵: 灣仔站A3出口朝銅鑼灣方向步行約6分鐘，便可抵達。",
+      "bus": "巴士: 於士釗域道下車 到達中邦商業大廈(入口便在集成中心旁邊)"
+    }
+  },
+  "navigation": {
+    "home": "首頁",
+    "practitioners": "醫師介紹",
+    "treatments": "治療方式",
+    "contact": "聯絡我們"
+  },
+  "languageSwitcher": {
+    "switchToEnglish": "Eng",
+    "switchToChinese": "中文"
+  }
+}

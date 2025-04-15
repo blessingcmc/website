@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Blessings Chinese Medicine Clinic</title>
+    <link rel="stylesheet" href="assets/css/styles.css">
+</head>
+<body>
+    <nav class="navbar transparent">
+        <ul>
+            <li><a href="#home">Home</a></li>
+            <li><a href="#practitioners">Practitioners</a></li>
+            <li><a href="#treatments">Treatments</a></li>
+            <li><a href="#contact">Contact Us</a></li>
+            <li><button id="lang-switch">中文</button></li>
+        </ul>
+    </nav>
+
+    <section id="home" class="parallax" style="background-image: url('assets/images/hero.jpg')">
+        <div class="content-wrapper">
+            <h1 class="section-heading"></h1>
+            <p class="section-text"></p>
+        </div>
+    </section>
+
+    <section id="practitioners">
+        <div class="content-wrapper">
+            <h2 class="section-heading"></h2>
+            <div class="practitioners-nav">
+                <button class="nav-btn active" data-doctor="agnes"></button>
+                <button class="nav-btn" data-doctor="mandy"></button>
+                <button class="nav-btn" data-doctor="lf"></button>
+                <button class="nav-btn" data-doctor="sky"></button>
+                <button class="nav-btn" data-doctor="cheese"></button>
+                <button class="nav-btn" data-doctor="kungfu"></button>
+            </div>
+            <div class="practitioner-content">
+                <div class="practitioner active" data-doctor="agnes">
+                    <div class="practitioner-info">
+                        <img src="assets/images/doctors/agnes.jpg" alt="Dr. Agnes">
+                        <div class="info-text">
+                            <h3 class="doctor-name"></h3>
+                            <p class="doctor-bio"></p>
+                            <div class="doctor-specialties">
+                                <h4>擅長項目</h4>
+                                <p class="specialties-text"></p>
+                            </div>
+                            <div class="doctor-schedule">
+                                <h4>應診時間</h4>
+                                <p class="schedule-text"></p>
+                            </div>
+                            <a href="#" class="instagram-link" target="_blank">
+                                <img src="assets/images/instagram-icon.png" alt="Instagram">
+                            </a>
+                        </div>
+                    </div>
+                </div>
+                <!-- Other practitioner divs will be generated dynamically -->
+            </div>
+        </div>
+    </section>
+
+    <section id="treatments" class="parallax" style="background-image: url('assets/images/treatments.jpg')">
+        <div class="content-wrapper">
+            <h2 class="section-heading"></h2>
+            <p class="section-text"></p>
+        </div>
+    </section>
+
+    <section id="contact">
+        <div class="content-wrapper">
+            <h2 class="section-heading"></h2>
+            <div class="contact-container">
+                <div class="contact-info">
+                    <p class="section-text"></p>
+                    <p class="address"></p>
+                    <p class="phone"></p>
+                </div>
+            </div>
+            <div class="travel-info">
+                <h3>前往診所</h3>
+                <div class="transport-options">
+                    <div class="transport-option">
+                        <p class="mtr-directions"></p>
+                    </div>
+                    <div class="transport-option">
+                        <p class="bus-directions"></p>
+                    </div>
+                </div>
+            </div>
+        </div>
+        
+    </section>
+
+    <script src="assets/js/main.js"></script>
+</body>
+</html>

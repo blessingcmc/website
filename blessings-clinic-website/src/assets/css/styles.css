@@ -1,0 +1,516 @@
+:root {
+    --primary-dark: #1a2f35;    /* Dark blue-green */
+    --primary: #0e8f71;         /* Your original color */
+    --primary-light: #64b6ac;   /* Light blue-green */
+    --accent: #c2e8e4;         /* Very light blue-green */
+    --text-light: #ffffff;
+    --text-dark: #1a2f35;
+    --overlay: rgba(26, 47, 53, 0.7); /* Semi-transparent dark blue-green */
+    --transition: all 0.3s ease;
+}
+
+html {
+    scroll-behavior: smooth;
+    scroll-snap-type: y mandatory;
+}
+
+body, html {
+    margin: 0;
+    padding: 0;
+    font-family: Arial, sans-serif;
+    scroll-behavior: smooth;
+}
+
+body {
+    margin: 0;
+    padding: 0;
+    font-family: 'Arial', sans-serif;
+    overflow-x: hidden;
+    background-color: var(--primary-dark);
+    color: var(--text-light);
+}
+
+header {
+    background-color: #0e8f71;
+    color: white;
+    padding: 20px;
+    text-align: center;
+}
+
+.navbar {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    padding: 20px 40px;
+    background: var(--primary-dark);
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+    z-index: 1000;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    transition: var(--transition);
+}
+
+.navbar.transparent {
+    background: linear-gradient(180deg, var(--overlay) 0%, transparent 100%);
+    box-shadow: none;
+}
+
+.navbar ul {
+    display: flex;
+    gap: 2rem;
+    list-style: none;
+    justify-content: center;
+    margin: 0;
+    padding: 0;
+}
+
+.navbar ul li {
+    margin: 0 15px;
+}
+
+.navbar ul li a, #lang-switch {
+    color: white;
+    text-decoration: none;
+    font-size: 16px;
+    cursor: pointer;
+}
+
+.navbar a {
+    color: var(--text-light);
+    text-decoration: none;
+    font-size: 1rem;
+    transition: var(--transition);
+    opacity: 0.9;
+}
+
+.navbar a:hover {
+    color: var(--accent);
+    opacity: 1;
+}
+
+#lang-switch {
+    background: transparent;
+    border: 1px solid var(--accent);
+    padding: 8px 16px;
+    border-radius: 20px;
+    cursor: pointer;
+    transition: var(--transition);
+    color: var(--text-light);
+}
+
+#lang-switch:hover {
+    background: var(--accent);
+    color: var(--primary-dark);
+}
+
+nav {
+    width: 30%;
+    float: left;
+    background-color: #e0f2f1;
+    padding: 15px;
+    box-shadow: 2px 2px 10px rgba(0, 0, 0, 0.1);
+}
+
+nav a {
+    display: block;
+    color: #0e8f71;
+    padding: 10px;
+    text-decoration: none;
+    margin: 5px 0;
+    border-radius: 5px;
+}
+
+nav a:hover {
+    background-color: #b2dfdb;
+}
+
+.main-content {
+    margin-left: 30%;
+    padding: 20px;
+    background-color: white;
+    box-shadow: 2px 2px 10px rgba(0, 0, 0, 0.1);
+}
+
+footer {
+    clear: both;
+    text-align: center;
+    padding: 10px;
+    background-color: #0e8f71;
+    color: white;
+    position: relative;
+    bottom: 0;
+    width: 100%;
+}
+
+.doctor-profile {
+    display: flex;
+    align-items: center;
+    margin-bottom: 20px;
+}
+
+.doctor-profile img {
+    border-radius: 50%;
+    margin-right: 15px;
+    width: 100px;
+    height: 100px;
+}
+
+.button {
+    background-color: #0e8f71;
+    color: white;
+    padding: 10px 15px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+.button:hover {
+    background-color: #00796b;
+}
+
+.parallax {
+    height: 100vh;
+    background: url('../images/clinic-bg.jpg') no-repeat center center fixed;
+    background-size: cover;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: white;
+    text-align: center;
+    background-attachment: fixed;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+
+.parallax::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background: var(--overlay);
+}
+
+section {
+    height: 100vh;
+    scroll-snap-align: start;
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    padding: 80px 20px;
+    overflow: hidden;
+    text-align: center;
+    background-color: var(--primary-dark);
+}
+
+section:nth-child(odd) {
+    background-color: var(--primary);
+}
+
+.content-wrapper {
+    max-width: 1200px;
+    width: calc(100% - 180px); /* Reduced from 250px */
+    margin-left: 140px; /* Changed from auto */
+    margin-right: 20px;
+    padding: 2rem;
+}
+
+.section-heading {
+    font-size: 3.5rem;
+    margin-bottom: 1rem;
+    opacity: 0;
+    transform: translateY(20px);
+    transition: var(--transition);
+    color: var(--text-light);
+    margin-bottom: 2rem;
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.3);
+}
+
+.section-text {
+    font-size: 1.2rem;
+    line-height: 1.6;
+    max-width: 600px;
+    margin: 0 auto;
+    opacity: 0;
+    transform: translateY(20px);
+    transition: var(--transition);
+    color: var(--text-light);
+    opacity: 0.9;
+}
+
+.visible {
+    opacity: 1;
+    transform: translateY(0);
+    transition: all 0.6s ease;
+}
+
+#practitioners, #treatments, #contact {
+    background-color: #f4f4f4;
+    color: #333;
+}
+
+#practitioners {
+    position: relative;
+    overflow: visible; /* Allow nav to extend outside */
+}
+
+.practitioner {
+    position: absolute;
+    width: 100%;
+    opacity: 0;
+    visibility: hidden;
+    transition: all 0.5s ease;
+    transform: translateX(20px);
+    background: var(--primary-light);
+    border-radius: 10px;
+    padding: 20px;
+    margin: 20px;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
+}
+
+.practitioner.active {
+    opacity: 1;
+    visibility: visible;
+    transform: translateX(0);
+}
+
+.practitioner img {
+    border-radius: 10px;
+    margin-bottom: 15px;
+    width: 300px;
+    height: 400px;
+    object-fit: cover;
+}
+
+/* Contact section specific styles */
+#contact {
+    background-color: var(--primary-dark);
+}
+
+.address, .phone {
+    color: var(--accent);
+    margin: 10px 0;
+}
+
+/* Active navigation link */
+.navbar a.active {
+    color: var(--accent);
+    border-bottom: 2px solid var(--accent);
+}
+
+/* Remove the fixed positioning and modify practitioners-nav */
+.practitioners-nav {
+    position: absolute;
+    left: 0;
+    top: 50%;
+    transform: translateY(-50%);
+    display: flex;
+    flex-direction: column;
+    gap: 0.5rem; /* Reduced from 1rem */
+    padding: 1rem; /* Reduced from 2rem */
+    background: rgba(14, 143, 113, 0.1);
+    backdrop-filter: blur(10px);
+    border-radius: 0 15px 15px 0;
+    z-index: 100;
+    width: 120px; /* Reduced from 180px */
+}
+
+/* Update the content wrapper for practitioners section */
+#practitioners .content-wrapper {
+    margin-left: 0px;
+    width: calc(100% - 160px); /* Adjusted from 280px */
+}
+
+/* Update practitioner content positioning */
+.practitioner-content {
+    position: relative;
+    min-height: 500px;
+    margin-left: 0; /* Remove any left margin */
+    width: 100%;
+}
+
+.nav-btn {
+    padding: 0.5rem 1rem; /* Reduced from 1rem 2rem */
+    border: none;
+    background: var(--primary-dark);
+    color: var(--text-light);
+    border-radius: 15px; /* Reduced from 25px */
+    cursor: pointer;
+    transition: all 0.3s ease;
+    min-width: 100px; /* Reduced from 150px */
+    text-align: left;
+    font-size: 0.9rem; /* Added to make text slightly smaller */
+}
+
+.nav-btn:hover {
+    background: var(--primary);
+    transform: translateX(10px);
+}
+
+.nav-btn.active {
+    background: var(--primary);
+    transform: translateX(10px);
+    position: relative;
+}
+
+.nav-btn.active::after {
+    content: '';
+    position: absolute;
+    right: -10px;
+    top: 50%;
+    transform: translateY(-50%);
+    width: 0;
+    height: 0;
+    border-top: 8px solid transparent;
+    border-bottom: 8px solid transparent;
+    border-left: 8px solid var(--primary);
+}
+
+.practitioner-info {
+    display: flex;
+    gap: 2rem;
+    align-items: flex-start;
+    padding: 2rem;
+    border-radius: 10px;
+    margin-left: 0; /* Remove any left margin */
+    background: rgba(255, 255, 255, 0.1);
+    backdrop-filter: blur(10px);
+}
+
+.practitioner-info img {
+    width: 300px;
+    height: 400px;
+    object-fit: cover;
+    border-radius: 10px;
+}
+
+.info-text {
+    flex: 1;
+    text-align: left;
+    color: var(--text-dark);
+}
+
+.doctor-name {
+    font-size: 2rem;
+    margin-bottom: 1rem;
+    color: var(--primary-dark);
+}
+
+.doctor-bio {
+    font-size: 1.1rem;
+    line-height: 1.6;
+    margin-bottom: 1.5rem;
+}
+
+.doctor-specialties, .doctor-schedule {
+    margin-bottom: 1.5rem;
+}
+
+.doctor-specialties h4, .doctor-schedule h4 {
+    color: var(--primary);
+    font-size: 1.2rem;
+    margin-bottom: 0.5rem;
+}
+
+.specialties-text {
+    font-size: 1rem;
+    line-height: 1.5;
+    color: var(--text-dark);
+}
+
+.schedule-text {
+    font-size: 1rem;
+    font-weight: 500;
+    color: var(--primary-dark);
+}
+
+.instagram-link {
+    display: inline-block;
+    margin-top: 1rem;
+}
+
+.instagram-link img {
+    width: 24px;
+    height: 24px;
+    transition: transform 0.3s ease;
+}
+
+.instagram-link:hover img {
+    transform: scale(1.2);
+}
+
+#contact .content-wrapper {
+    text-align: left;
+}
+
+.contact-info {
+    max-width: 800px;
+    margin-left: 0;
+}
+
+#contact .section-heading {
+    text-align: left;
+    margin-left: 0;
+}
+
+#contact .section-text,
+#contact .address,
+#contact .phone {
+    margin-left: 0;
+    margin-bottom: 1rem;
+    text-align: left;
+}
+
+.contact-container {
+    display: flex;
+    justify-content: space-between;
+    gap: 2rem;
+    margin-bottom: 2rem;
+}
+
+.contact-info, .travel-info {
+    flex: 1;
+}
+
+.travel-info h3 {
+    color: var(--primary);
+    font-size: 1.8rem;
+    margin-bottom: 1.5rem;
+}
+
+.transport-options {
+    display: flex;
+    flex-direction: column;
+    gap: 1.5rem;
+}
+
+.transport-option h4 {
+    color: var(--primary-dark);
+    font-size: 1.2rem;
+    margin-bottom: 0.5rem;
+}
+
+.transport-option p {
+    color: var(--text-light);
+    line-height: 1.6;
+}
+
+.map-container {
+    width: 100%;
+    margin-top: 2rem;
+    border-radius: 10px;
+    overflow: hidden;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
+}
+
+.clinic-map {
+    width: 100%;
+    height: auto;
+    display: block;
+}

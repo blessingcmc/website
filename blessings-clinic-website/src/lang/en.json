@@ -1,0 +1,58 @@
+{
+  "title": "Blessings Chinese Medicine Clinic",
+  "home": {
+    "welcome": "Welcome to Blessings Chinese Medicine Clinic",
+    "latestInstagramPost": "Latest Instagram Post"
+  },
+  "practitioners": {
+    "title": "Our Practitioners",
+    "doctors": ["agnes", "mandy", "sky", "lf", "cheese", "kungfu"],
+    "agnes": {
+      "name": "李翠珊中醫師",
+      "bio": "簡",
+      "instagramLink": "blessings.nolimit"
+    },
+    "mandy": {
+      "name": "劉敏怡中醫師",
+      "bio": "簡",
+      "instagramLink": "醫師個人Instagram"
+    },
+    "lf": {
+      "name": "黎俊輝中醫師",
+      "bio": "簡",
+      "instagramLink": "world.of.lf"
+    },
+    "sky": {
+      "name": "冼建移中醫師",
+      "bio": "簡",
+      "instagramLink": "醫師個人Instagram"
+    },
+    "cheese": {
+      "name": "周芷羨中醫師",
+      "bio": "簡",
+      "instagramLink": "醫師個人Instagram"
+    },
+    "kungfu": {
+      "name": "余承暉中醫師",
+      "bio": "簡",
+      "instagramLink": "醫師個人Instagram"
+    }
+  },
+  "treatments": {
+    "title": "Treatment Information",
+    "description": "Explore the various treatments we offer to help you achieve optimal health."
+  },
+  "contact": {
+    "title": "Contact Us",
+    "description": "Get in touch with us for more information or to schedule an appointment.",
+    "address": "123 Healing Way, Wellness City, HC 12345",
+    "phone": "123-456-7890"
+  },
+  "navigation": {
+    "home": "Home",
+    "practitioners": "Practitioners",
+    "treatments": "Treatments",
+    "contact": "Contact Us",
+    "languageSwitcher": "Switch Language"
+  }
+}
