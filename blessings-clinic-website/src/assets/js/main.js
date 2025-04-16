@@ -110,7 +110,7 @@ async function loadLanguage(lang) {
                             <h3 class="treatment-name">${treatment.name}</h3>
                             <p class="treatment-description">${treatment.description}</p>
                             <div class="treatment-details">
-                                <h4>適應症狀</h4>
+                                <h4>${treatments.usage}</h4>
                                 <p class="symptoms-text">${treatment.symptoms}</p>
                             </div>
                         </div>

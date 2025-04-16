@@ -1,96 +1,97 @@
 {
-  "clinicName": "福氣堂中醫診所",
+  "clinicName": "Blessings Chinese Medicine Clinic",
   "home": {
-    "welcome": "Welcome to Blessings Clinic",
-    "contact": "23th Floor, Chung Pont Commercial Building, 300 Hennessy Road, Wan Chai / Contact Number: 57158858"
+    "welcome": "Welcome to Blessings Chinese Medicine Clinic",
+    "contact": "23/F, Chung Pont Commercial Building, 300 Hennessy Road, Wan Chai, Hong Kong / Tel: 57158858"
   },
   "practitioners": {
-    "title": "醫師介紹",
+    "title": "Our Practitioners",
     "doctors": ["agnes", "mandy", "sky", "lf", "cheese", "kungfu"],
     "agnes": {
-      "name": "李翠珊中醫師",
-      "bio": "香港大學 中醫學（針灸）碩士<br>香港大學 中醫學 學士<br>中醫學深造證書(臨床婦科學)",
-      "items": "婦科 | 美容針 | 面癱 | 兒科 ",
-      "opening_hours": "逢星期一、二、四、六",
+      "name": "Agnes Li, Registered Chinese Medicine Practitioner",
+      "bio": "Master of Chinese Medicine (Acupuncture), The University of Hong Kong<br>Bachelor of Chinese Medicine, The University of Hong Kong<br>Advanced Certificate in Clinical Gynecology",
+      "items": "Gynecology | Cosmetic Acupuncture | Facial Paralysis | Pediatrics",
+      "opening_hours": "Monday, Tuesday, Thursday, Saturday",
       "instagramLink": "blessings.nolimit"
     },
     "mandy": {
-      "name": "劉敏怡中醫師",
-      "bio": "香港中文大學 中醫學 學士",
-      "items": "手法結構治療 | 美容針 | 內科 | 痛症 | 針灸",
-      "opening_hours": "逢星期一、二、五、六",
-      "instagramLink": "醫師個人Instagram"
+      "name": "Mandy Lau, Registered Chinese Medicine Practitioner",
+      "bio": "Bachelor of Chinese Medicine, The Chinese University of Hong Kong",
+      "items": "Manual Structural Treatment | Cosmetic Acupuncture | Internal Medicine | Pain Management | Acupuncture",
+      "opening_hours": "Monday, Tuesday, Friday, Saturday",
+      "instagramLink": "nekotcm"
     },
     "lf": {
-      "name": "黎俊輝中醫師",
-      "bio": "香港中文大學 中醫學 碩士",
-      "items": "痛症 | 脾胃 | 男科 | 艾灸",
-      "opening_hours": "逢星期二、五、日",
+      "name": "Vincent Lai, Registered Chinese Medicine Practitioner",
+      "bio": "Master of Chinese Medicine, The Chinese University of Hong Kong",
+      "items": "Pain Management | Digestive System | Men's Health | Moxibustion",
+      "opening_hours": "Tuesday, Friday, Sunday",
       "instagramLink": "world.of.lf"
     },
     "sky": {
-      "name": "冼建移中醫師",
-      "bio": "香港中文大學 中醫學 學士",
-      "items": "手法結構治療 | 針灸 | 兒科 | 脾胃 ",
-      "opening_hours": "逢星期一、五",
-      "instagramLink": "醫師個人Instagram"
+      "name": "Sky Sin, Registered Chinese Medicine Practitioner",
+      "bio": "Bachelor of Chinese Medicine, The Chinese University of Hong Kong",
+      "items": "Manual Structural Treatment | Acupuncture | Pediatrics | Digestive System",
+      "opening_hours": "Monday, Friday",
+      "instagramLink": "Doctor's Instagram"
     },
     "cheese": {
-      "name": "周芷羨中醫師",
-      "bio": "香港中文大學 針灸學理學 碩士<br>香港中文大學 中醫學 學士",
-      "items": "婦科 | 手法結構治療 | 備孕 | 痛症 | 皮膚 | 針灸",
-      "opening_hours": "逢星期四、日",
-      "instagramLink": "醫師個人Instagram"
+      "name": "Chau Tsz Sin, Registered Chinese Medicine Practitioner",
+      "bio": "Master of Science in Acupuncture, The Chinese University of Hong Kong<br>Bachelor of Chinese Medicine, The Chinese University of Hong Kong",
+      "items": "Gynecology | Manual Structural Treatment | Fertility | Pain Management | Dermatology | Acupuncture",
+      "opening_hours": "Thursday, Sunday",
+      "instagramLink": "Doctor's Instagram"
     },
     "kungfu": {
-      "name": "余承暉中醫師",
-      "bio": "廣州中醫藥大學 中醫學 學士",
-      "items": "手法結構治療 | 痛症 | 脾胃 | 肺病 | 經痛 | 針灸 ",
-      "opening_hours": "逢星期一、二、四、六",
-      "instagramLink": "醫師個人Instagram"
+      "name": "Yu Shing Fai, Registered Chinese Medicine Practitioner",
+      "bio": "Bachelor of Chinese Medicine, Guangzhou University of Chinese Medicine",
+      "items": "Manual Structural Treatment | Pain Management | Digestive System | Respiratory Diseases | Menstrual Pain | Acupuncture",
+      "opening_hours": "Monday, Tuesday, Thursday, Saturday",
+      "instagramLink": "Doctor's Instagram"
     }
   },
   "treatments": {
-    "title": "治療方式",
-    "description": "我們提供各種中醫治療服務，包括濃縮中藥沖劑、針灸、綜合結構治療及各種特色療法。",
+    "title": "Treatment Methods",
+    "description": "We offer various Chinese medicine treatments, including concentrated herbal granules, acupuncture, integrated structural therapy, and various specialized therapies.",
+    "usage": "Applicable Symptoms",
     "decoction": {
-      "name": "沖劑",
-      "description": "濃縮中藥沖劑的詳細介紹...",
-      "symptoms": "感冒、發燒、咳嗽、胃痛等"
+      "name": "Concentrated Herbal Granules",
+      "description": "Concentrated Chinese herbal granules are granules or powders made by extracting and concentrating traditional Chinese herbs using modern technology, offering convenience in use and storage. The production involves selecting herbs, decocting, concentrating, and drying, preserving the active ingredients with efficacy comparable to traditional decoctions. Simply dissolve in warm water for consumption, eliminating the hassle of self-decoction, ideal for busy modern lifestyles. These granules are widely used for health regulation and chronic disease treatment, featuring precise dosage, portability, and quick absorption, making them popular among patients.",
+      "symptoms": "Internal medicine conditions such as colds, fevers, coughs, and stomach pains, as well as for body conditioning and immune enhancement."
     },
     "acupuncture": {
-      "name": "針刺",
-      "description": "針灸治療的詳細介紹...",
-      "symptoms": "痛症、頭痛、失眠、焦慮等"
+      "name": "Acupuncture",
+      "description": "Acupuncture is the core technique of Chinese medicine, originating from traditional practices, involving the insertion of fine needles into specific acupoints to regulate qi and blood flow and balance yin and yang. Acupuncture stimulates these points, promotes blood circulation, relieves pain, and regulates organ functions. It's commonly used to treat chronic pain, digestive issues, and insomnia. During treatment, professional practitioners select appropriate points based on individual conditions, ensuring safety and effectiveness. This simple procedure has minimal side effects and, supported by modern medical research, has proven effective for various conditions, gaining worldwide trust as a natural therapeutic method.",
+      "symptoms": "Various conditions including pain, headaches, insomnia, and anxiety."
     },
     "moxibustion": {
-      "name": "艾灸",
-      "description": "艾灸治療的詳細介紹...",
-      "symptoms": "胃寒、腰痛、關節痛等"
+      "name": "Moxibustion",
+      "description": "Moxibustion is a traditional Chinese therapy using burning moxa sticks or cones made from mugwort to apply heat to specific acupoints, warming the meridians and regulating qi and blood flow. It promotes blood circulation and enhances immunity, effectively treating joint pain from cold-damp conditions, gynecological issues, and fatigue. Practitioners carefully control the distance and duration for safety and comfort. This gentle, non-invasive therapy has few side effects and, combined with mugwort's medicinal properties, is particularly suitable for those with cold constitutions. As a natural therapy, moxibustion is globally popular for its warming and therapeutic effects.",
+      "symptoms": "Cold stomach, lower back pain, joint pain, and various symptoms caused by cold-damp conditions or cold constitution."
     },
     "structural": {
-      "name": "綜合結構治療",
-      "description": "綜合結構治療的詳細介紹...",
-      "symptoms": "脊椎問題、肌肉疼痛、姿勢不正等"
+      "name": "Integrated Structural Therapy",
+      "description": "The body is supported by its skeletal framework, which relies on muscles and fascia for proper alignment. When muscles are injured or overused, adhesions form between muscles and fascia, preventing normal interaction and leading to skeletal misalignment. This affects local fluid circulation due to pressure changes, resulting in various forms of edema and inflammation.<br><br>Many bodily discomforts stem from hardware issues affecting functionality. These impacts can manifest as limb pain or internal organ compression causing symptoms like stomach pain or dizziness.<br><br>Structural therapy fundamentally releases adhesions at different levels, allowing proper bone realignment to resolve various issues.<br><br>Our approach mainly guide the body through gentle movements or assist with needling to release muscle tension and restore normal function.",
+      "symptoms": "Spinal issues, muscle pain, postural problems, or any internal medicine symptoms caused by structural issues."
     },
     "therapy": {
-      "name": "中醫理療",
-      "description": "中醫理療的詳細介紹...",
-      "symptoms": "各種慢性疼痛、肌肉緊張等"
+      "name": "Chinese Medicine Physiotherapy",
+      "description": "Chinese medicine physiotherapy includes traditional treatments like cupping and gua sha, aimed at regulating qi-blood and clearing meridians. Cupping uses negative pressure to adhere to the skin, promoting blood circulation and relieving muscle pain and cold symptoms, particularly effective for shoulder and neck stiffness. Gua sha involves scraping the skin with special tools to remove dampness, improve fatigue and circulation, suitable for fever or musculoskeletal discomfort. These simple, professional treatments are safe, effective, with minimal side effects. Combined with Traditional Chinese Medicine theory, these methods regulate constitution and boost immunity, popular among health enthusiasts.",
+      "symptoms": "Various chronic pain conditions and muscle tension."
     }
   },
   "contact": {
-    "title": "聯絡我們",
-    "address": "診所地址 : 香港灣仔軒尼詩道300號中邦商業大廈23樓",
-    "phone": "預約電話 / Whatsapp : 57158858",
-    "time": "診所時間 : 星期一至日 11:00 - 20:00 / 逢星期三休息 / 公眾假期以ig公告為準",
-    "photos": "照"
+    "title": "Contact Us",
+    "address": "Clinic Address: 23/F, Chung Pont Commercial Building, 300 Hennessy Road, Wan Chai, Hong Kong",
+    "phone": "Appointment / WhatsApp: 57158858",
+    "time": "Opening Hours: Monday to Sunday 11:00 - 20:00 / Closed on Wednesdays / Public holidays subject to Instagram announcements",
+    "photos": "Photos"
   },
   "navigation": {
     "home": "Home",
     "practitioners": "Practitioners",
     "treatments": "Treatments",
-    "contact": "Contact Us"
+    "contact": "Contact"
   },
   "languageSwitcher": {
     "switchToEnglish": "Eng",
