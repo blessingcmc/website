@@ -154,6 +154,28 @@ document.addEventListener('DOMContentLoaded', () => {
                 initTreatments();
             });
         });
+    };
+
+    // Mobile menu toggle
+    const menuToggle = document.querySelector('.menu-toggle');
+    const navbarMenu = document.querySelector('.navbar ul');
+    
+    menuToggle.addEventListener('click', () => {
+        menuToggle.classList.toggle('active');
+        navbarMenu.classList.toggle('active');
+    });
+
+    // Close menu when clicking a link
+    document.querySelectorAll('.navbar a').forEach(link => {
+        link.addEventListener('click', () => {
+            menuToggle.classList.remove('active');
+            navbarMenu.classList.remove('active');
+        });
+    });
+
+    // Initialize mobile dropdowns for practitioners and treatments
+    if (window.innerWidth <= 768) {
+        initMobileDropdowns();
     }
 });
 
@@ -215,6 +237,41 @@ function initTreatments() {
             if (activeContent) {
                 activeContent.classList.add('active');
             }
+        });
+    });
+}
+
+function initMobileDropdowns() {
+    const sections = ['practitioners', 'treatments'];
+    
+    sections.forEach(section => {
+        const nav = document.querySelector(`.${section}-nav`);
+        if (!nav) return;
+
+        // Find the first nav button text to use as default
+        const firstButton = nav.querySelector('.nav-btn');
+        if (!firstButton) return;
+
+        // Create and insert dropdown button with first option text
+        const dropdown = document.createElement('button');
+        dropdown.className = 'dropdown-button';
+        dropdown.textContent = firstButton.textContent;
+        nav.parentNode.insertBefore(dropdown, nav);
+
+        // Toggle dropdown
+        dropdown.addEventListener('click', () => {
+            dropdown.classList.toggle('active');
+            nav.classList.toggle('active');
+        });
+
+        // Update dropdown text when option selected
+        const navButtons = nav.querySelectorAll('.nav-btn');
+        navButtons.forEach(btn => {
+            btn.addEventListener('click', () => {
+                dropdown.textContent = btn.textContent;
+                dropdown.classList.remove('active');
+                nav.classList.remove('active');
+            });
         });
     });
 }
