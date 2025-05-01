@@ -190,6 +190,8 @@ footer {
     background-position: center;
     background-repeat: no-repeat;
     background-size: cover;
+    position: relative;
+    overflow: visible;
 }
 
 .parallax::before {
@@ -696,19 +698,43 @@ section:nth-child(odd) {
     .treatments-nav {
         position: relative;
         transform: none;
-        width: 60%;
+        width: 100%;
         background: var(--primary-dark);
         padding: 0.5rem;
         max-height: 50px;
         overflow: hidden;
         transition: max-height 0.3s ease;
         border-radius: 5px;
+        margin-bottom: 1rem;
+        /* Remove any conflicting styles */
+        height: auto;
     }
 
     .practitioners-nav.active,
     .treatments-nav.active {
         max-height: 300px;
         overflow-y: auto;
+        padding: 0.5rem;
+    }
+
+    /* Navigation buttons in dropdowns */
+    .practitioners-nav .nav-btn,
+    .treatments-nav .nav-btn {
+        width: 100%;
+        text-align: left;
+        padding: 0.8rem;
+        border: none;
+        background: transparent;
+        color: var(--text-light);
+        transform: none !important;
+        margin: 0;
+    }
+
+    /* Remove any duplicate or conflicting styles */
+    .practitioners-nav,
+    .treatments-nav {
+        position: relative !important;
+        width: 100% !important;
     }
 
     /* Navigation buttons in dropdowns */

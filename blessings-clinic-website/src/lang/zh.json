@@ -5,7 +5,9 @@
     "contact": "香港灣仔軒尼詩道300號中邦商業大廈23樓 / 預約電話: 57158858"
   },
   "practitioners": {
-    "title": "醫師介紹",
+    "title": "醫師團隊",
+    "itemtitle": "擅長項目",
+    "timetitle": "應診時間",
     "doctors": ["agnes", "mandy", "sky", "lf", "cheese", "kungfu"],
     "agnes": {
       "name": "李翠珊中醫師",
@@ -33,21 +35,21 @@
       "bio": "香港中文大學 中醫學 學士",
       "items": "手法結構治療 | 針灸 | 兒科 | 脾胃 ",
       "opening_hours": "逢星期一、五",
-      "instagramLink": "醫師個人Instagram"
+      "instagramLink": "skysky723a"
     },
     "cheese": {
       "name": "周芷羨中醫師",
       "bio": "香港中文大學 針灸學理學 碩士<br>香港中文大學 中醫學 學士",
       "items": "婦科 | 手法結構治療 | 備孕 | 痛症 | 皮膚 | 針灸",
       "opening_hours": "逢星期四、日",
-      "instagramLink": "醫師個人Instagram"
+      "instagramLink": "chau_ec"
     },
     "kungfu": {
       "name": "余承暉中醫師",
       "bio": "廣州中醫藥大學 中醫學 學士",
       "items": "手法結構治療 | 痛症 | 脾胃 | 肺病 | 經痛 | 針灸 ",
       "opening_hours": "逢星期一、二、四、六",
-      "instagramLink": "醫師個人Instagram"
+      "instagramLink": "cmp_structurereduction_diary"
     }
   },
   "treatments": {

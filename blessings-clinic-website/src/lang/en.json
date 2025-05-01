@@ -6,6 +6,8 @@
   },
   "practitioners": {
     "title": "Our Practitioners",
+    "itemtitle": "Specialization",
+    "timetitle": "Working Day",
     "doctors": ["agnes", "mandy", "sky", "lf", "cheese", "kungfu"],
     "agnes": {
       "name": "Agnes Li, Registered Chinese Medicine Practitioner",
@@ -33,21 +35,21 @@
       "bio": "Bachelor of Chinese Medicine, The Chinese University of Hong Kong",
       "items": "Manual Structural Treatment | Acupuncture | Pediatrics | Digestive System",
       "opening_hours": "Monday, Friday",
-      "instagramLink": "Doctor's Instagram"
+      "instagramLink": "skysky723a"
     },
     "cheese": {
       "name": "Chau Tsz Sin, Registered Chinese Medicine Practitioner",
       "bio": "Master of Science in Acupuncture, The Chinese University of Hong Kong<br>Bachelor of Chinese Medicine, The Chinese University of Hong Kong",
       "items": "Gynecology | Manual Structural Treatment | Fertility | Pain Management | Dermatology | Acupuncture",
       "opening_hours": "Thursday, Sunday",
-      "instagramLink": "Doctor's Instagram"
+      "instagramLink": "chau_ec"
     },
     "kungfu": {
       "name": "Yu Shing Fai, Registered Chinese Medicine Practitioner",
       "bio": "Bachelor of Chinese Medicine, Guangzhou University of Chinese Medicine",
       "items": "Manual Structural Treatment | Pain Management | Digestive System | Respiratory Diseases | Menstrual Pain | Acupuncture",
       "opening_hours": "Monday, Tuesday, Thursday, Saturday",
-      "instagramLink": "Doctor's Instagram"
+      "instagramLink": "cmp_structurereduction_diary"
     }
   },
   "treatments": {

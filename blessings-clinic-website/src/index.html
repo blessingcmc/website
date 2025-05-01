@@ -6,6 +6,15 @@
     <title>Blessings Chinese Medicine Clinic</title>
     <link rel="stylesheet" href="assets/css/styles.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+    <script src="assets/js/device-detector.js"></script>
+    <script>
+        document.addEventListener('DOMContentLoaded', function() {
+            if (window.deviceDetector && window.deviceDetector.isMobile) {
+                window.location.href = 'mobile-home.html';
+            }
+        });
+    </script>
+    <!-- Mobile-specific styles will be loaded conditionally via JavaScript -->
 </head>
 <body>
     <nav class="navbar transparent">
@@ -121,6 +130,19 @@
         </div>
     </section>
 
+    <!-- Main application script -->
     <script src="assets/js/main.js"></script>
+    
+    <script>
+        // Dynamically load mobile-specific CSS if on a mobile device
+        document.addEventListener('DOMContentLoaded', function() {
+            if (window.deviceDetector && window.deviceDetector.isMobile) {
+                const mobileCssLink = document.createElement('link');
+                mobileCssLink.rel = 'stylesheet';
+                mobileCssLink.href = 'assets/css/mobile-styles.css';
+                document.head.appendChild(mobileCssLink);
+            }
+        });
+    </script>
 </body>
 </html>
